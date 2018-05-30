@@ -1,4 +1,4 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
@@ -12,11 +12,14 @@ module.exports = {
       }
     ]
   },
-
+  devServer: {
+    port: 3000,
+    open: true
+  },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html"
+      template: './public/index.html',
+      filename: './index.html'
     })
   ]
-}
+};
